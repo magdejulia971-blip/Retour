@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retour : le rappel qui fait revenir vos clients</title>
+<meta name="description" content="Vos clients sont contents, mais ils oublient de revenir. Retour leur envoie un rappel au bon moment, avec une offre à usage unique. 25 € par mois, sans engagement.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Retour : le rappel qui fait revenir vos clients">
+<meta property="og:description" content="Un rappel au bon moment, une offre à usage unique, et vos clients reviennent. 25 € par mois, sans engagement.">
+<!-- À AJOUTER PLUS TARD : <meta property="og:image" content="https://VOTRE-SITE.vercel.app/apercu.png"> -->
+<meta name="theme-color" content="#14213D">
+<style>
+:root{--encre:#14213D;--signal:#FFC83D;--fond:#F4F6F5;--texte:#1B2433;--gris:#5B6678;--ligne:#D6DBE0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texte);background:var(--fond);padding-bottom:84px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.12;letter-spacing:-.02em;color:var(--encre)}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+section{padding:44px 0}
+a{color:inherit}
+.btn{display:block;text-align:center;background:var(--signal);color:var(--encre);font-weight:700;font-size:18px;text-decoration:none;padding:17px 20px;border-radius:10px;border:2px solid var(--encre)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--encre);outline-offset:3px}
+.petit{font-size:14px;color:var(--gris);margin-top:10px}
+/* haut de page */
+.hero{background:var(--encre);color:#fff;padding:40px 0 48px}
+.hero h1{color:#fff;font-size:clamp(34px,9vw,52px);font-weight:700}
+.hero p.sous{font-size:19px;margin:18px 0 26px;color:#DCE3EE}
+.hero .petit{color:#AEB9CB}
+.marque{font-family:Georgia,serif;font-weight:700;font-size:20px;margin-bottom:34px;color:var(--signal)}
+/* étapes */
+h2{font-size:clamp(26px,7vw,34px);margin-bottom:22px}
+.etapes{list-style:none;padding:0;border-left:3px solid var(--encre);margin-left:6px}
+.etapes li{padding:0 0 22px 20px;position:relative}
+.etapes li:last-child{padding-bottom:0}
+.etapes li::before{content:attr(data-n);position:absolute;left:-16px;top:0;width:29px;height:29px;border-radius:50%;background:var(--encre);color:#fff;font-weight:700;font-size:15px;text-align:center;line-height:29px}
+.etapes b{display:block;color:var(--encre);font-size:18px}
+/* exemple chiffré */
+.calcul{background:#fff;border:2px solid var(--encre);border-radius:12px;padding:22px}
+.calcul p+p{margin-top:10px}
+.calcul .gros{font-family:Georgia,serif;font-size:34px;font-weight:700;color:var(--encre);line-height:1.1}
+/* prix */
+.prix{background:#fff;border:2px solid var(--encre);border-radius:14px;padding:26px 22px}
+.prix .montant{font-family:Georgia,serif;font-size:48px;font-weight:700;color:var(--encre);line-height:1}
+.prix .montant small{font-size:18px;font-family:system-ui,sans-serif;font-weight:400;color:var(--gris)}
+.prix ul{padding-left:20px;margin:16px 0 20px}
+.prix li{margin-bottom:6px}
+.garantie{background:var(--fond);border-left:5px solid var(--signal);padding:14px 16px;margin:0 0 20px;font-size:16px}
+/* questions */
+details{border-bottom:1px solid var(--ligne);padding:16px 0}
+summary{font-weight:700;color:var(--encre);cursor:pointer;list-style:none;padding-right:24px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:0;font-size:22px;line-height:1.2}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px;color:var(--texte)}
+/* pied */
+footer{border-top:1px solid var(--ligne);padding:26px 0 30px;font-size:14px;color:var(--gris)}
+footer a{margin-right:14px;display:inline-block;padding:6px 0}
+/* bouton fixe au pouce */
+.fixe{position:fixed;left:0;right:0;bottom:0;background:var(--fond);border-top:1px solid var(--ligne);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));z-index:5}
+.fixe .btn{max-width:608px;margin:0 auto;padding:14px 20px}
+@media(min-width:720px){body{font-size:18px}.fixe{display:none}body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marque">Retour</div>
+    <!-- IMPORTANT : cette phrase doit être la même, mot pour mot, que celle de vos vidéos -->
+    <h1>Vos clients vous aiment. Ils oublient juste de revenir.</h1>
+    <p class="sous">Retour leur envoie un rappel au bon moment, avec une offre valable une seule fois. Vous ne tenez aucun fichier et vous ne relancez personne.</p>
+    <a class="btn" href="#prix">Commencer</a>
+    <p class="petit">25 € par mois, sans engagement, remboursé si ça ne vous convient pas.</p>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Comment ça marche</h2>
+    <ol class="etapes">
+      <li data-n="1"><b>Vous récupérez le contact</b>Au moment de payer, le client laisse son numéro ou son email.</li>
+      <li data-n="2"><b>Le rappel part tout seul</b>Après le délai naturel de votre prestation (par exemple 6 semaines pour une coupe), il reçoit un message.</li>
+      <li data-n="3"><b>Il revient avec son offre</b>L’offre ne sert qu’une fois. Vous voyez combien de clients sont revenus et ce qu’ils ont dépensé.</li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Ce que coûte l’oubli</h2>
+    <div class="calcul">
+      <p>Exemple : 20 clients par mois ne reviennent pas, à 35 € la prestation.</p>
+      <p class="gros">700 € perdus</p>
+      <p>Chaque mois. Si Retour en ramène seulement 1 sur 20, il a déjà payé son abonnement de 25 €.</p>
+      <p class="petit">Chiffres donnés à titre d’exemple. Remplacez-les par les vôtres.</p>
+    </div>
+  </div>
+</section>
+
+<section id="prix" style="padding-top:0">
+  <div class="wrap">
+    <h2>Un seul prix</h2>
+    <div class="prix">
+      <div class="montant">25 €<small> par mois</small></div>
+      <p class="petit" style="margin-top:6px">soit moins de 1 € par jour</p>
+      <ul>
+        <li>Collecte du contact au moment du paiement</li>
+        <li>Rappel automatique au bon moment</li>
+        <li>Offre de retour à usage unique</li>
+        <li>Compteur des clients revenus et du chiffre généré</li>
+      </ul>
+      <p class="garantie"><b>Satisfait ou remboursé, 30 jours.</b> Écrivez-nous à [À COMPLÉTER : votre email] et nous vous remboursons sous 5 jours ouvrés, sans question.</p>
+      <!-- REMPLACEZ # PAR VOTRE LIEN DE PAIEMENT STRIPE -->
+      <a class="btn" href="#" id="payer">Commencer pour 25 € par mois</a>
+      <p class="petit" style="text-align:center">Sans engagement, résiliable à tout moment.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Est-ce que ça marche pour mon commerce ?</summary><p>Si vos clients reviennent à intervalles réguliers (coiffeur, institut, garage, boutique), oui. Si on ne peut pas deviner quand ils reviendraient, ce n’est pas fait pour vous.</p></details>
+    <details><summary>Combien de temps ça me prend ?</summary><p>Quelques secondes par client, au moment de l’encaissement. Le reste est automatique.</p></details>
+    <details><summary>Que se passe-t-il si je veux arrêter ?</summary><p>Vous résiliez quand vous voulez, en un message, sans frais ni préavis. Pendant les 30 premiers jours, vous êtes en plus remboursé.</p></details>
+    <details><summary>À quoi sert exactement ce que je paie ?</summary><p>À faire revenir vos clients : l’envoi des rappels, l’offre à usage unique et le suivi de ce qu’ils vous rapportent.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <a href="/cgv.html">CGV</a>
+    <a href="/confidentialite.html">Confidentialité</a>
+  </div>
+</footer>
+
+<div class="fixe"><a class="btn" href="#prix">Commencer</a></div>
+</body>
+</html>
